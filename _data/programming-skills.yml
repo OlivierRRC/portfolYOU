@@ -1,15 +1,11 @@
-- name: Unity/C#
+- name: HTML5/CSS3
   percentage: 90
-  color: 
+  color: danger
 
-- name: Unreal Blueprints
-  percentage: 70
+- name: Go
+  percentage: 80
   color:
 
 - name: Python
-  percentage: 60
-  color: 
-  
- - name: Java Script
-  percentage: 80
-  color: 
+  percentage: 70
+  color: secondary
