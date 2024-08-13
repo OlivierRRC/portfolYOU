@@ -5,20 +5,17 @@
 
 $color-main: #28a745;
 
-.timelineBody {
-  &::after {
-    background: {
-      color: $color-main;
-    }
-  }
-}
+$background-color_1: #ff0000;
 
-.timelineBody,
-.timeline-item {
-  &::after {
-    border: 4px solid {
-      color: $color-main;
-    }
+.timeline-body {
+  &:after {
+    content: "";
+    width: 4px;
+    height: 100%;
+    background-color: $background-color_1;
+    position: absolute;
+    left: -4px;
+    top: 0;
   }
 }
 
