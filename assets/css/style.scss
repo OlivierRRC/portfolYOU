@@ -7,7 +7,7 @@ $color-main: #28a745;
 
 .timelineBody {
   &::after {
-    background: {
+    background-color: {
       color: $color-main;
     }
   }
