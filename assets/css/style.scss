@@ -3,9 +3,13 @@
 
 @import "portfolYOU";
 
+$color-main: #a72828;
+
 .timelineBody {
   &::after {
-    background: #28a745;
+    background: {
+      color: $color-main;
+    }
   }
 }
 
