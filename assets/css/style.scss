@@ -3,7 +3,7 @@
 
 @import "portfolYOU";
 
-$color-main: #a72828;
+$color-main: #28a745;
 
 .timelineBody {
   &::after {
@@ -14,21 +14,29 @@ $color-main: #a72828;
 }
 
 .link-after {
-  background: #28a745;
+  background: {
+    color: $color-main;
+  }
 }
 .nav-link,
 .navbar-brand {
   &::after {
-    background: #28a745;
+    background: {
+      color: $color-main;
+    }
   }
 }
 .nav-item.active {
   &::after {
-    background: #28a745;
+    background: {
+      color: $color-main;
+    }
   }
 }
 .navbar-brand {
   &::after {
-    background: #28a745;
+    background: {
+      color: $color-main;
+    }
   }
 }
