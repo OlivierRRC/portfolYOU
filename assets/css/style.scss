@@ -2,38 +2,22 @@
 ---
 
 .link-after {
-  content: "";
-  display: block;
-  height: 0.15em;
-  background: $danger;
+  background: #28a745;
 }
-
 .nav-link,
 .navbar-brand {
   &::after {
-    @extend .link-after;
-    width: 0;
-    transition: width 0.35s;
-  }
-
-  &:hover::after {
-    width: 100%;
+    background: #28a745;
   }
 }
-
 .nav-item.active {
-  font-weight: bold;
-
   &::after {
-    @extend .link-after;
-    width: 100% !important;
+    background: #28a745;
   }
 }
-
 .navbar-brand {
-  margin-bottom: -14px;
   &::after {
-    margin-top: -0.25em;
+    background: #28a745;
   }
 }
 @import "portfolYOU";
