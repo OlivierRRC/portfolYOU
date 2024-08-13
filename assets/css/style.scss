@@ -1,5 +1,22 @@
 ---
 ---
 
-$blue: red;
+.link-after {
+  background: #28a745;
+}
+.nav-link {
+  &::after {
+    background: #28a745;
+  }
+}
+.navbar-brand {
+  &::after {
+    background: #28a745;
+  }
+}
+.nav-item.active {
+  &::after {
+    background: #28a745;
+  }
+}
 @import "portfolYOU";
