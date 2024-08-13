@@ -2,6 +2,13 @@
 ---
 
 @import "portfolYOU";
+
+.timelineBody {
+  &::after {
+    background: #28a745;
+  }
+}
+
 .link-after {
   background: #28a745;
 }
@@ -19,11 +26,5 @@
 .navbar-brand {
   &::after {
     background: #28a745;
-  }
-}
-
-.timeline-body {
-  &:after {
-    background-color: #28a745;
   }
 }
