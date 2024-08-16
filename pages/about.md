@@ -8,7 +8,9 @@ weight: 3
 # **About Me**
 
 Hi I am **{{ site.author.name }}** :wave:,<br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+I have been teaching myselft programing since the fifth grade. I started with scratch (like every good programmer should) before eventually falling in love with
+making games in unity. I kept teaching myself new things untill I was finally old
+enough to have programming classes offered at my school. By then I had already taught myself most of what I was learning. Now I'm continuing my learning more formally by attending RRC Polytech for game development.
 
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}

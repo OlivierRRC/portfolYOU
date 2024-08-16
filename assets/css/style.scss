@@ -5,6 +5,14 @@
 
 $color-main: #28a745;
 
+[data-theme="dark"] #theme-toggler:before {
+  content: "☀";
+}
+
+[data-theme="light"] #theme-toggler:before {
+  content: "🕶";
+}
+
 a {
   color: $color-main;
   &:hover {
