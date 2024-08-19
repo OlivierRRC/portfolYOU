@@ -1,7 +1,7 @@
 ---
 name: Necromancy Game Mechanic
 tools: [C#, Unity]
-image: (../assets/NecromacerPost/Cover.jpg)
+image: ../assets/NecromacerPost/Cover.jpg
 description: This project started with the idea of a necormany mechanic, and ended up being a nice lesson in inheritance based design.
 ---
 
@@ -24,6 +24,7 @@ Next I made the undead. The undead need the ability to move, to attack the livin
 After that I made the living. The living need the ability to move, to attack the undead, and to die. They also need to be available to the player once dead to be revived as an undead.
 
 <!-- Gameplay image here -->![Gameplay Screenshot](../assets/NecromacerPost/Gameplay.jpg)
+*Above is a screenshot of my finished product.*
 
 ## Inheritance
 
