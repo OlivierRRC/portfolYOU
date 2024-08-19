@@ -1,8 +1,8 @@
 ---
 name: Necromancy Game Mechanic
 tools: [C#, Unity]
-image: https://www.sketchappsources.com/resources/source-image/movie-badges-jurajjurik.png
-description: This project has an individual showcase page, not just a direct link to the project site or repo. Now you have more space to describe your awesome project!
+image: (../assets/NecromacerPost/Cover.jpg)
+description: This project started with the idea of a necormany mechanic, and ended up being a nice lesson in inheritance based design.
 ---
 
 # Necromancy Game Mechanic
@@ -23,7 +23,7 @@ Next I made the undead. The undead need the ability to move, to attack the livin
 
 After that I made the living. The living need the ability to move, to attack the undead, and to die. They also need to be available to the player once dead to be revived as an undead.
 
-<!-- Gameplay image here -->
+<!-- Gameplay image here -->![Gameplay Screenshot](../assets/NecromacerPost/Gameplay.jpg)
 
 ## Inheritance
 
@@ -39,7 +39,7 @@ From “Character” I derived two scripts: The “Player” script and the “A
 
 From “ArtificialCharacter” I derived two scripts: The “Living” script and the “Undead” script. The “Living” script contains the logic for targeting specifically the undead and the player and dropping the summoning resource, while the “Undead” script contains the logic for targeting specifically the living as well as some control the player has over where they go when out of combat.
 
-![diagram](../assets/NecromacerPost/umlDiagram.webp)
+![Inheritance diagram](../assets/NecromacerPost/umlDiagram.webp)
 _Above is a graph illustrating how I use inheratence in my project._
 
 ## Character
@@ -62,7 +62,8 @@ For the sprite flipping, I first get the mouse position in world coordinates. Th
 
 For triggering the attack, I first find the nearest living character within the attack range. This is done by doing a circle cast around the player. If there are any living characters within the circle I iterate through them to find which one is closest to the player. If there is a closest living character, and the left mouse button is clicked I trigger an attack animation. The animation triggers a method from the script on the impact frame. The “DealDamage” method triggers the “TakeDamage” method in the target's “Character” script while passing attack damage variable as the amount to be subtracted.
 
-<!--Attack diagram-->
+<!--Attack diagram-->![Diagram of attack timing](../assets/NecromacerPost/AttackDiagram.webp)
+*Above is an ilustration of how the animation triggering system works.*
 
 The reviving trigger works in a very similar way to the attack trigger. I first find the nearest dead character. This is done in the same way as finding the living ones, but with an extra check of the death boolean. Then I use the player’s health as a resource to revive the dead. Anywhere from one to four health can be drained, with the player having a maximum of five health. Then if the player has the requisite amount of health, an animation is played that triggers a summon method. This method is a coroutine that waits a certain amount of seconds to instantiate the desired undead character, and stop triggering the animation.
 
@@ -76,7 +77,8 @@ The most important piece of code is the “UpdatePath” method which I have run
 
 Then I actually move the object by calculating the direction towards the next waypoint in the path, and adding a force to a rigidbody in that direction multiplied by a speed value. This is all done in the fixed update method for the same reasons as the player movement was.
 
-<!--Pathfinding visual-->
+<!--Pathfinding visual-->![Pathfinding diagram](../assets/NecromacerPost/NavigationDiagram.webp)
+*Above is a visualisation of the pathﬁnding.*
 
 The target of the artificial character pathfinding is decided based on when some conditions are met. If there is one or more enemies (living for undead and vice versa) within the vision radius of an artificial character, it will find the closest one the same way the player does. If the artificial character reaches within the attack range of its enemy, it will begin an attack animation which functions in the same way the player’s does. If there is no closest enemy the artificial character will stand still.
 
@@ -92,7 +94,8 @@ The “Undead” script has some extra code for pathfinding target selection. In
 
 The “Scared” script derives from the “Living” script. The idea behind a scared character is that it is a character that can not attack. So when faced with an enemy within its vision radius, instead of walking towards that enemy, it walks in the opposite direction.
 
-<!--scared character diagram -->
+<!--scared character diagram -->![Scared character logic diagram](../assets/NecromacerPost/ScaredDiagram.webp)
+*Above is an ilustration of the logic behind the scared character.*
 
 ## Final Product
 
